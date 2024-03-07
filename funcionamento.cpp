@@ -22,3 +22,7 @@ void inserirPecasListaDeChegada(seccao*& armazem, int numeroSeccoes, pecas*& pec
     }
 }
 
+void removerPecasListaDeChegada(seccao*& armazem,int numeroSeccoes,pecas*& pecasListaDeChegada,int& pecasListaDeChegadaTotal, int numeroPecasInseridasSeccao){
+
+}
+

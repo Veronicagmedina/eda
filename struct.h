@@ -7,6 +7,8 @@ struct pecas {
     string marca;
     string categoria;
     float preco;
+    float percentagemVenda;
+    int numeroSerie;
 };
 
 struct seccao {

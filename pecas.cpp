@@ -1,11 +1,13 @@
 #include "struct.h"
 #include "pecas.h"
-
+#include "constantes.h"
 
 pecas criarPeca(string*marcas, int numeroMarcas, string*categorias, int numeroCategorias) {
     pecas peca;
     peca.marca = *(marcas + rand() % numeroMarcas);
     peca.categoria = *(categorias + rand() % numeroCategorias);
+    peca.percentagemVenda = rand() % (percentagemVendaMax-percentagemVendaMin+1) + percentagemVendaMin;
+    peca.numeroSerie = rand() % (numeroSerieMax-numeroSerieMin+1) + numeroSerieMin;
     return peca;
 }
 
