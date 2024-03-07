@@ -1,0 +1,9 @@
+# ninja log v5
+9	1072	7313399884629071	CMakeFiles/ProjetoEDA1.dir/main.cpp.obj	331566cba65f63ee
+37	1079	7313399884689113	CMakeFiles/ProjetoEDA1.dir/ficheiros.cpp.obj	b4dc469420aedd66
+707	927	7311202634604032	ProjetoEDA1.exe	cbea8e8d52630cc4
+21	1078	7313399884669094	CMakeFiles/ProjetoEDA1.dir/seccao.cpp.obj	81a97705b2adaf1e
+47	1074	7313399884639081	CMakeFiles/ProjetoEDA1.dir/listaDeChegada.cpp.obj	de863664855e5e51
+28	1077	7313399884679127	CMakeFiles/ProjetoEDA1.dir/pecas.cpp.obj	943352b0694908cb
+50	1358	7315236344827765	CMakeFiles/ProjetoEDA1.dir/seccao.cpp.obj	81a97705b2adaf1e
+42	1360	7315236344827765	CMakeFiles/ProjetoEDA1.dir/pecas.cpp.obj	943352b0694908cb
