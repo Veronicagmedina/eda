@@ -3,7 +3,7 @@
 #include "constantes.h"
 using namespace std;
 
-struct pecas {
+struct peca {
     string marca;
     string categoria;
     float preco;
@@ -16,9 +16,10 @@ struct seccao {
     int capacidade;
     char numeroDeSerie;
     int quantidadeAtual;
+    int numeroPecasSeccao;
     float faturacaoSecao;
     string categoria;
-    pecas* pecas;
+    peca* listaPecas;
 };
 
 struct armazem {
@@ -26,6 +27,6 @@ struct armazem {
     float faturacaoToral;
     int numeroSeccoes;
     float faturacaoPorSeccao;
-    pecas listaDeChegada;
+    peca listaDeChegada;
     int quantidadeDePecasNaListaDeChegada;
 };

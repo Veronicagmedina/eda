@@ -5,25 +5,29 @@
 
 #include "constantes.h"
 #include "struct.h"
+#include "ficheiros.h"
+#include "seccao.h"
+#include "funcionamento.h"
 
 using namespace std;
 
 int main() {
     locale::global(locale(""));
 
+
     srand(time(NULL));
 
-    int numeroMarca = contarLinhasFicheiro("marcas.txt");
-    string *marcas = new string[numeroMarca];
+    int numeroMarcas = contarLinhasFicheiro("C:\\Users\\35193\\Desktop\\ProjetoEDA1\\marcas.txt");
+    string marcas[numeroMarcas];
 
-    int numeroCategoria = contarLinhasFicheiro("categorias.txt");
-    string *categorias = new string[numeroCategoria];
+    int numeroCategoria = contarLinhasFicheiro("C:\\Users\\35193\\Desktop\\ProjetoEDA1\\categorias.txt");
+    string categorias[numeroCategoria];
 
-    carregarLinhasFicheiro("marcas.txt", marcas);
-    carregarLinhasFicheiro("categorias.txt", categorias);
+    carregarLinhasFicheiro("C:\\Users\\35193\\Desktop\\ProjetoEDA1\\marcas.txt", marcas);
+    carregarLinhasFicheiro("C:\\Users\\35193\\Desktop\\ProjetoEDA1\\categorias.txt", categorias);
 
-    pecas *pecasListaDeChegada = new pecas[0]; //Criar/alocar memoria para a fila/lista de espera
-    int pecasListaDeChegadaTotal = 0; //Iniciar a variável do tamanho da fila de espera
+    peca *pecasListaDeChegada = new peca[0]; //Criar/alocar memoria para a lista de chegada
+    int pecasListaDeChegadaTotal = 0; //Iniciar a variável do tamanho da lista de chegada
 
 
     int numeroSeccoes = rand() % (numeroMaxSeccoes - numeroMinSeccoes + 1) +
@@ -32,11 +36,9 @@ int main() {
 
     seccao *armazem = new seccao[numeroSeccoes]; //Criar/alocar memoria para o arrays das secçoes
 
-    criarSeccao(categorias, numeroCategorias);
-    inserirPecasListaDeChegada(armazem, numeroSeccoes, pecasListaDeChegada, pecasListaDeChegadaTotal, numeroPecas,
-                               categorias, numeroCategorias, marcas, numeroMarcas);
-
-
+    criarSeccao(categorias, numeroCategoria);
+    inserirPecasListaDeChegada(armazem, numeroSeccoes, pecasListaDeChegada, pecasListaDeChegadaTotal, numeroPecasNovas,
+                               categorias, numeroCategoria, marcas, numeroMarcas);
 }
 
 

@@ -1,3 +1,4 @@
+#include <iostream>
 #include "ficheiros.h"
 
 int contarLinhasFicheiro(string ficheiro) {
@@ -12,14 +13,16 @@ int contarLinhasFicheiro(string ficheiro) {
     }
     return numeroLinhas;
 }
-void carregarLinhasFicheiro(string ficheiro, string* p) {
+void carregarLinhasFicheiro(string ficheiro, string p[]) {
     ifstream file;
     int i = 0;
+
     file.open(ficheiro, ios::in);
     if (file.is_open()) {
         string line;
         while (getline(file, line)) {
             p[i] = line;
+            std::cout << p << std::endl;
             i++;
         }
     }

@@ -8,9 +8,9 @@
 
 using namespace std;
 
-void seguinte(seccao*& armazem, int numeroSeccoes, pecas*& listaChegada, int& listaChegadaTotal, string* categorias, int numeroCategorias, string* marcas, int numeroMarcas);
-void inserirPecasListaDeChegada(seccao*& armazem, int numeroSeccoes, pecas*& pecasListaDeChegada, int& pecasListaDeChegadaTotal, int numeroPecas, string* categorias, int numeroCategorias, string* marcas, int numeroMarcas);
-void removerPecasListaDeChegada(seccao*& armazem,int numeroSeccoes,pecas*& pecasListaDeChegada,int& pecasListaDeChegadaTotal, int numeroPecasInseridasSeccao);
+void seguinte(seccao*& armazem, int numeroSeccoes, peca*& listaChegada, int& listaChegadaTotal, string* categorias, int numeroCategorias, string* marcas, int numeroMarcas);
+void inserirPecasListaDeChegada(seccao*& armazem, int numeroSeccoes, peca*& pecasListaDeChegada, int& pecasListaDeChegadaTotal, int numeroPecas, string* categorias, int numeroCategorias, string* marcas, int numeroMarcas);
+void removerPecasListaDeChegada(seccao*& armazem, int numeroSeccoes, peca*& pecasListaDeChegada, int& pecasListaDeChegadaTotal, int numeroPecasInseridasSeccao);
 
 
 

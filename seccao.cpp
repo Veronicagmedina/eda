@@ -5,7 +5,8 @@ int ID=0;
 
 seccao criarSeccao(string*categorias, int numeroCategorias){
     seccao seccao;
-    seccao.categoria=categorias[rand()%numeroCategorias];
+    int r = rand();
+    seccao.categoria=categorias[r%numeroCategorias];
     seccao.capacidade= rand() % (capacidadeMaxSeccoes-capacidadeMinSeccoes+1) + capacidadeMinSeccoes;
     seccao.ID = 'A' + ID++;
     return seccao;

@@ -12,8 +12,6 @@ add_executable(ProjetoEDA1 main.cpp
         ficheiros.cpp
         pecas.h
         seccao.h
-        listaDeChegada.h
-        listaDeChegada.cpp
         funcionamento.cpp
         funcionamento.h
 )

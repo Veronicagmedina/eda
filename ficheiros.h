@@ -5,7 +5,7 @@
 using namespace std;
 
 int contarLinhasFicheiro(string ficheiro);
-void carregarLinhasFicheiro(string ficheiro, string* linhas);
+void carregarLinhasFicheiro(string ficheiro, string p[]);
 string linhaAleatoria(string* linhas, int numLinhas);
 
 

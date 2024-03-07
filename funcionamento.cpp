@@ -1,16 +1,16 @@
 #include "funcionamento.h"
 #include "pecas.h"
 
-void seguinte(seccao*& armazem, int numeroSeccoes, pecas*& listaChegada, int& listaChegadaTotal, string* categorias, int numeroCategorias, string* marcas, int numeroMarcas) {
+void seguinte(seccao*& armazem, int numeroSeccoes, peca*& listaChegada, int& listaChegadaTotal, string* categorias, int numeroCategorias, string* marcas, int numeroMarcas) {
 
     inserirPecasListaDeChegada(armazem, numeroSeccoes, listaChegada, listaChegadaTotal, numeroPecasNovas, categorias, numeroCategorias, marcas, numeroMarcas);
     removerPecasListaDeChegada(armazem, numeroSeccoes, listaChegada, listaChegadaTotal, numeroPecasInseridasSeccao);
 
 }
 
-void inserirPecasListaDeChegada(seccao*& armazem, int numeroSeccoes, pecas*& pecasListaDeChegada, int& pecasListaDeChegadaTotal, int numeroPecas, string* categorias, int numeroCategorias, string* marcas, int numeroMarcas) {
+void inserirPecasListaDeChegada(seccao*& armazem, int numeroSeccoes, peca*& pecasListaDeChegada, int& pecasListaDeChegadaTotal, int numeroPecas, string* categorias, int numeroCategorias, string* marcas, int numeroMarcas) {
     while (numeroPecas) {
-        pecas novo = criarPeca(marcas, numeroMarcas, categorias, numeroCategorias);
+        peca novo = criarPeca(marcas, numeroMarcas, categorias, numeroCategorias);
         for (int i = 0; i < numeroSeccoes; i++) {
             bool podeEntrar = (armazem[i].categoria == novo.categoria);
             if (podeEntrar) {
@@ -22,7 +22,21 @@ void inserirPecasListaDeChegada(seccao*& armazem, int numeroSeccoes, pecas*& pec
     }
 }
 
-void removerPecasListaDeChegada(seccao*& armazem,int numeroSeccoes,pecas*& pecasListaDeChegada,int& pecasListaDeChegadaTotal, int numeroPecasInseridasSeccao){
-
+void removerPecasListaDeChegada(seccao*& armazem, int numeroSeccoes, peca*& listaDeChegada, int& listaDeChegadaTotal, int numeroPecas){
+    int peca = 0;
+    int removida = 0;
+    while (removida < numeroPecas && peca<listaDeChegadaTotal) {
+        for (int i = 0; i < numeroSeccoes; i++) {
+            bool podeEntrar = true;
+            if (podeEntrar) {
+                inserirPeca(armazem[i].listaPecas, armazem[i].numeroPecasSeccao, listaDeChegada[peca]);
+                removerPeca(listaDeChegada, listaDeChegadaTotal, peca);
+                removida++;
+                peca--;
+                break;
+            }
+        }
+        peca++;
+    }
 }
 

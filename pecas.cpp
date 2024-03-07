@@ -2,28 +2,30 @@
 #include "pecas.h"
 #include "constantes.h"
 
-pecas criarPeca(string*marcas, int numeroMarcas, string*categorias, int numeroCategorias) {
-    pecas peca;
+peca criarPeca(string*marcas, int numeroMarcas, string*categorias, int numeroCategorias) {
+    peca peca;
     peca.marca = *(marcas + rand() % numeroMarcas);
     peca.categoria = *(categorias + rand() % numeroCategorias);
-    peca.percentagemVenda = rand() % (percentagemVendaMax-percentagemVendaMin+1) + percentagemVendaMin;
+    peca.percentagemVenda = rand() % static_cast<int>(percentagemVendaMax-percentagemVendaMin+1) + percentagemVendaMin;
     peca.numeroSerie = rand() % (numeroSerieMax-numeroSerieMin+1) + numeroSerieMin;
     return peca;
 }
 
-void inserirPeca(pecas*& lista, int& tamanho, pecas peca) {
+
+
+void inserirPeca(peca*& lista, int& tamanho, peca p) {
 
 
     int novoTamanho = tamanho + 1;
 
-    pecas* novo = new pecas[novoTamanho];
+    peca* novo = new peca[novoTamanho];
 
     for (int i = 0; i < tamanho; i++)
     {
         novo[i] = lista[i];
     }
 
-    novo[novoTamanho - 1] = peca;
+    novo[novoTamanho - 1] = p;
 
     delete[] lista;
 
@@ -31,17 +33,17 @@ void inserirPeca(pecas*& lista, int& tamanho, pecas peca) {
 
     tamanho = novoTamanho;
 }
-void removerPeca(pecas*& lista, int& tamanho, int peca) {
+void removerPeca(peca*& lista, int& tamanho, int p) {
     int novoTamanho = tamanho - 1;
 
-    pecas* novo = new pecas[novoTamanho];
+    peca* novo = new peca[novoTamanho];
 
-    for (int i = 0; i < peca; i++)
+    for (int i = 0; i < p; i++)
     {
         novo[i] = lista[i];
     }
 
-    for (int i = peca; i < novoTamanho; i++)
+    for (int i = p; i < novoTamanho; i++)
     {
         novo[i] = lista[i + 1];
     }

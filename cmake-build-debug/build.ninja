@@ -73,12 +73,6 @@ build CMakeFiles/ProjetoEDA1.dir/ficheiros.cpp.obj: CXX_COMPILER__ProjetoEDA1_un
   OBJECT_DIR = CMakeFiles\ProjetoEDA1.dir
   OBJECT_FILE_DIR = CMakeFiles\ProjetoEDA1.dir
 
-build CMakeFiles/ProjetoEDA1.dir/listaDeChegada.cpp.obj: CXX_COMPILER__ProjetoEDA1_unscanned_Debug C$:/Users/35193/Desktop/ProjetoEDA1/listaDeChegada.cpp || cmake_object_order_depends_target_ProjetoEDA1
-  DEP_FILE = CMakeFiles\ProjetoEDA1.dir\listaDeChegada.cpp.obj.d
-  FLAGS = -g -fdiagnostics-color=always
-  OBJECT_DIR = CMakeFiles\ProjetoEDA1.dir
-  OBJECT_FILE_DIR = CMakeFiles\ProjetoEDA1.dir
-
 build CMakeFiles/ProjetoEDA1.dir/funcionamento.cpp.obj: CXX_COMPILER__ProjetoEDA1_unscanned_Debug C$:/Users/35193/Desktop/ProjetoEDA1/funcionamento.cpp || cmake_object_order_depends_target_ProjetoEDA1
   DEP_FILE = CMakeFiles\ProjetoEDA1.dir\funcionamento.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always
@@ -93,7 +87,7 @@ build CMakeFiles/ProjetoEDA1.dir/funcionamento.cpp.obj: CXX_COMPILER__ProjetoEDA
 #############################################
 # Link the executable ProjetoEDA1.exe
 
-build ProjetoEDA1.exe: CXX_EXECUTABLE_LINKER__ProjetoEDA1_Debug CMakeFiles/ProjetoEDA1.dir/main.cpp.obj CMakeFiles/ProjetoEDA1.dir/seccao.cpp.obj CMakeFiles/ProjetoEDA1.dir/pecas.cpp.obj CMakeFiles/ProjetoEDA1.dir/ficheiros.cpp.obj CMakeFiles/ProjetoEDA1.dir/listaDeChegada.cpp.obj CMakeFiles/ProjetoEDA1.dir/funcionamento.cpp.obj
+build ProjetoEDA1.exe: CXX_EXECUTABLE_LINKER__ProjetoEDA1_Debug CMakeFiles/ProjetoEDA1.dir/main.cpp.obj CMakeFiles/ProjetoEDA1.dir/seccao.cpp.obj CMakeFiles/ProjetoEDA1.dir/pecas.cpp.obj CMakeFiles/ProjetoEDA1.dir/ficheiros.cpp.obj CMakeFiles/ProjetoEDA1.dir/funcionamento.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ProjetoEDA1.dir
